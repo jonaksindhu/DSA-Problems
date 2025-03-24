@@ -7,27 +7,15 @@ jobs:
       - checkout
 
       - run:
-          name: Check Java Version
-          command: java -version
+          name: Compile DSAproblems1.java
+          command: javac Arrays/DSAproblems1.java
 
       - run:
-          name: Compile Java Files
-          command: javac Arrays/*.java
-
-      - run:
-          name: Run MatrixMultiplication
-          command: java -cp Arrays MatrixMultiplication
-
-      - run:
-          name: Run RotateArray
-          command: java -cp Arrays RotateArray
-
-      - run:
-          name: Run ReverseNumber
-          command: java -cp Arrays reversenumber
+          name: Run DSAproblems1
+          command: java -cp Arrays DSAproblems1
 
 workflows:
   version: 2
-  java_dsa_pipeline:
+  build_and_run:
     jobs:
       - build
