@@ -11,6 +11,7 @@ public class MatrixMultiplication {
             for (int j = 0; j < m1; j++) {
                 grid1[i][j] = sc.nextInt();
             }
+        sc.close();
         }
 
         int n2, m2;
@@ -53,5 +54,7 @@ public class MatrixMultiplication {
     }
     return result; 
     }
+
+    
 
 }
