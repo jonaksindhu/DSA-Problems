@@ -1,4 +1,7 @@
+package src;
+
 import java.util.Scanner;
+
 
 public class DSAproblems1 {
     public static void main(String[] args) {
