@@ -10,7 +10,8 @@ public class DSAproblems1 {
         System.out.println("1. Matrix Multiplication");
         System.out.println("2. Rotate Array");
         System.out.println("3. Reverse Number");
-        System.out.print("Enter your choice (1-3): ");
+        System.out.println("4. Monotonic Array");  
+        System.out.print("Enter your choice (1-4): ");
         int choice = sc.nextInt();
 
         switch (choice) {
@@ -23,6 +24,9 @@ public class DSAproblems1 {
             case 3:
                 reverseNumber();
                 break;
+            case 4:
+                monotonicArray();
+                break;  
             default:
                 System.out.println("Invalid choice!");
         }
@@ -119,6 +123,44 @@ public class DSAproblems1 {
         }
 
         System.out.println("Reversed Number: " + reversed);
+    }
+
+
+    public static void monotonicArray()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Check if array is monotonic:");
+
+        System.out.print("Enter size of the array: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        boolean isIncreasing = true;
+        boolean isDecreasing = true;
+
+        for (int i=1 ; i>=arr.length - 1; i++)
+        {
+            if (arr[i] > arr[i-1])
+            {
+                isDecreasing = false;
+            }
+            else if (arr[i] < arr[i-1])
+            {
+                isIncreasing = false;
+            }
+        }
+        if (isIncreasing || isDecreasing)
+        {
+            System.out.println("The array is monotonic");
+        }
+        else
+        {
+            System.out.println("The array is not monotonic");
+        }
+
     }
     
 }
