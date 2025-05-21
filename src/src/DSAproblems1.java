@@ -122,7 +122,7 @@ public class DSAproblems1 {
         System.out.println("Reversed Number: " + reversed);
     }
 
-
+    // ---------- Check if array is Monotonic ----------
     public static void monotonicArray()
     {
         Scanner sc = new Scanner(System.in);
