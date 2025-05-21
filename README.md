@@ -13,8 +13,10 @@ This repository contains my solutions to a variety of Data Structures and Algori
 
 4. **Monotonic Array**: Checks if an array is monotonic (either entirely non-increasing or non-decreasing).
 
+5. **String Key Counter**: Counts the number of consecutive identical characters in a string.
+
 ## How to Run
 1. Compile the Java file: `javac DSAproblems1.java`
 2. Run the program: `java DSAproblems1`
-3. Choose the operation you want to perform (1-4)
+3. Choose the operation you want to perform (1-5)
 4. Follow the on-screen instructions to input the required values

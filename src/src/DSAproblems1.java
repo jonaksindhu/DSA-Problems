@@ -7,8 +7,9 @@ public class DSAproblems1 {
         System.out.println("1. Matrix Multiplication");
         System.out.println("2. Rotate Array");
         System.out.println("3. Reverse Number");
-        System.out.println("4. Monotonic Array");  
-        System.out.print("Enter your choice (1-4): ");
+        System.out.println("4. Monotonic Array"); 
+        System.out.println("5. Count the number of changing keys in a string");
+        System.out.print("Enter your choice (1-5): ");
         int choice = sc.nextInt();
 
         switch (choice) {
@@ -24,6 +25,9 @@ public class DSAproblems1 {
             case 4:
                 monotonicArray();
                 break;  
+            case 5:
+                countKeys();
+                break;
             default:
                 System.out.println("Invalid choice!");
         }
@@ -76,6 +80,7 @@ public class DSAproblems1 {
                 System.out.print(val + " ");
             System.out.println();
         }
+        sc.close();
     }
 
     // ---------- Rotate Array ----------
@@ -104,6 +109,7 @@ public class DSAproblems1 {
         for (int val : rotated)
             System.out.print(val + " ");
         System.out.println();
+        sc.close();
     }
 
     // ---------- Reverse Number ----------
@@ -120,6 +126,7 @@ public class DSAproblems1 {
         }
 
         System.out.println("Reversed Number: " + reversed);
+        sc.close();
     }
 
     // ---------- Check if array is Monotonic ----------
@@ -157,7 +164,23 @@ public class DSAproblems1 {
         {
             System.out.println("The array is not monotonic");
         }
+        sc.close();
 
+    }
+
+    // ---------- Count the number of changing keys in a string ----------
+    public static void countKeys() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Count Keys in String:");
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        int count = 0;
+        for (int i=1; i<=input.length()-1; i++) {
+            if (input.charAt(i) == input.charAt(i-1)) {
+                count++;
+            }
+        }
+        System.out.println("Number of keys: " + count);
     }
     
 }
